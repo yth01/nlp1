@@ -1,0 +1,64 @@
+{
+  "id": "airport_baggage_delay",
+  "title": "Airport Baggage Delay",
+  "level": "Travel problem solving",
+  "context": "You arrive for an overseas business trip, but your checked baggage has not appeared. Your laptop charger and meeting clothes are inside, and you need help before tomorrow morning.",
+  "persona": "A busy airline baggage service agent who is polite but trying to move the line quickly.",
+  "persona_emotion": "busy and procedural",
+  "transcript": [
+    {
+      "speaker": "You",
+      "line": "My checked bag has not appeared on the carousel."
+    },
+    {
+      "speaker": "Agent",
+      "line": "Can I see your baggage tag?"
+    },
+    {
+      "speaker": "You",
+      "line": "Yes, here it is. I have a meeting tomorrow morning."
+    }
+  ],
+  "staff_line": "Your bag is not on this flight. You may need to wait a few days for delivery.",
+  "pause_line": "Your bag is not on this flight. You may need to wait a few days for delivery.",
+  "response_goal": "Explain the urgency, provide useful baggage details, and request a report plus the fastest realistic next step.",
+  "ideal_intent": "Politely explain the urgency, provide flight and baggage details, ask the agent to file a report, and request a delivery timeline or temporary support options.",
+  "acceptable_responses": [
+    "I understand. I have an important meeting tomorrow, so could you please file a report and confirm when the bag can be delivered?",
+    "My meeting clothes and charger are in that bag. Could you check the baggage tag and tell me the fastest delivery option?",
+    "Could you please create a missing baggage report and let me know whether the airline can provide any urgent support?"
+  ],
+  "evaluation_rubric": [
+    {
+      "key": "urgency",
+      "label": "Urgency",
+      "description": "Explains why the delay matters, such as tomorrow's meeting or essential items.",
+      "markers": ["meeting", "tomorrow", "urgent", "important", "charger", "clothes", "morning"],
+      "weight": 0.3
+    },
+    {
+      "key": "baggage_details",
+      "label": "Baggage details",
+      "description": "Mentions baggage tag, flight, bag, or other searchable details.",
+      "markers": ["bag", "baggage", "tag", "flight", "checked", "luggage"],
+      "weight": 0.25
+    },
+    {
+      "key": "report_request",
+      "label": "Report request",
+      "description": "Asks the agent to file or create a missing baggage report.",
+      "markers": ["file", "create", "report", "missing", "claim"],
+      "weight": 0.25
+    },
+    {
+      "key": "delivery_plan",
+      "label": "Delivery plan",
+      "description": "Requests a timeline, fastest option, delivery, or temporary support.",
+      "markers": ["delivery", "deliver", "timeline", "fastest", "option", "support", "when"],
+      "weight": 0.2
+    }
+  ],
+  "poor_response": "A few days is impossible. You need to find my bag immediately.",
+  "excellent_response": "I understand. I have an important business meeting tomorrow, and my charger and clothes are in that bag. Could you please file a missing baggage report and confirm the fastest delivery option?",
+  "model_response": "I understand. I have an important business meeting tomorrow, and my charger and clothes are in that bag. Could you please file a missing baggage report and confirm the fastest delivery option?"
+}

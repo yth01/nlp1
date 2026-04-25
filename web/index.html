@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Context-First</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="training">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Context-First</p>
+            <h1>Situation Practice</h1>
+          </div>
+          <div class="scenario-control">
+            <label for="scenarioSelect">Scenario</label>
+            <select id="scenarioSelect"></select>
+            <div class="badge" id="level">Scenario</div>
+          </div>
+        </header>
+
+        <section class="scene" aria-live="polite">
+          <div class="flow-step">
+            <span>1</span>
+            <p class="label">Situation</p>
+            <h2 id="title">Loading...</h2>
+            <p id="context"></p>
+          </div>
+          <div class="flow-step">
+            <span>2</span>
+            <p class="label">Scene Transcript</p>
+            <div class="transcript" id="transcript"></div>
+          </div>
+          <div class="flow-step">
+            <span>3</span>
+            <p class="label">Crisis Pause</p>
+            <div class="dialogue">
+              <p class="speaker">Counterpart</p>
+              <p id="staffLine"></p>
+            </div>
+            <p class="goal" id="responseGoal"></p>
+          </div>
+        </section>
+
+        <form id="responseForm" class="coach">
+          <div class="flow-step compact">
+            <span>4</span>
+            <p class="label">Response</p>
+          </div>
+          <label for="response">Your immediate response</label>
+          <textarea
+            id="response"
+            name="response"
+            rows="4"
+            placeholder="Type your response in English..."
+          ></textarea>
+          <div class="form-actions">
+            <button type="submit">Evaluate</button>
+          </div>
+        </form>
+      </section>
+
+      <aside class="results">
+        <h2>AI Coach</h2>
+        <div class="score-grid">
+          <div>
+            <span>Final</span>
+            <strong id="finalScore">--</strong>
+          </div>
+          <div>
+            <span>Intent</span>
+            <strong id="semanticScore">--</strong>
+          </div>
+          <div>
+            <span>Nuance</span>
+            <strong id="nuanceScore">--</strong>
+          </div>
+        </div>
+        <div class="feedback">
+          <p class="label">Rating</p>
+          <p id="ratingLine">Submit a response to see situational feedback.</p>
+          <p class="label">Context</p>
+          <p id="contextExplanation">--</p>
+          <p class="label">Intent Match</p>
+          <p id="intentMatch">--</p>
+          <p class="label">Social Nuance</p>
+          <p id="socialNuance">--</p>
+          <p class="label">Business Fit</p>
+          <p id="businessAppropriateness">--</p>
+          <p class="label">Improve</p>
+          <ul id="improvements"></ul>
+          <p class="label">Grammar</p>
+          <ul id="grammarFeedback"></ul>
+        </div>
+        <div class="rubric">
+          <p class="label">Rubric</p>
+          <div id="rubricBreakdown"></div>
+        </div>
+        <div class="better">
+          <p class="label">Better response</p>
+          <p id="betterResponse">--</p>
+        </div>
+      </aside>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

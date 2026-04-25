@@ -1,0 +1,64 @@
+{
+  "id": "video_meeting_delay",
+  "title": "Video Meeting Delay",
+  "level": "Remote work communication",
+  "context": "You join a video call with an overseas partner, but your team has not finished the updated proposal deck. The partner is waiting and sounds impatient.",
+  "persona": "A senior overseas partner who expects a clear update and dislikes vague excuses.",
+  "persona_emotion": "impatient and skeptical",
+  "transcript": [
+    {
+      "speaker": "Partner",
+      "line": "We scheduled this call to review the revised proposal."
+    },
+    {
+      "speaker": "You",
+      "line": "Yes, we have been working on the final version."
+    },
+    {
+      "speaker": "Partner",
+      "line": "The timeline is tight on our side."
+    }
+  ],
+  "staff_line": "We were expecting the revised proposal now. Are you ready to present it or not?",
+  "pause_line": "We were expecting the revised proposal now. Are you ready to present it or not?",
+  "response_goal": "Acknowledge the delay, protect trust, avoid vague excuses, and propose a specific next step with a timeline.",
+  "ideal_intent": "Acknowledge the delay, avoid vague excuses, give a clear reason, propose a concrete next step, and preserve trust with the partner.",
+  "acceptable_responses": [
+    "I apologize for the delay. We found one pricing issue in the deck, and I can walk you through the key changes now while we send the corrected file within an hour.",
+    "You're right to expect it now. We need a little more time to correct the final numbers, but I can share the main updates first.",
+    "I'm sorry for the delay. To avoid giving you incorrect information, could we review the main points now and send the finalized deck by 3 p.m.?"
+  ],
+  "evaluation_rubric": [
+    {
+      "key": "accountability",
+      "label": "Accountability",
+      "description": "Acknowledges the delay without sounding defensive.",
+      "markers": ["apologize", "sorry", "delay", "right", "understand"],
+      "weight": 0.25
+    },
+    {
+      "key": "clear_reason",
+      "label": "Clear reason",
+      "description": "Gives a specific reason instead of a vague excuse.",
+      "markers": ["pricing", "numbers", "issue", "correct", "incorrect", "final"],
+      "weight": 0.25
+    },
+    {
+      "key": "next_step",
+      "label": "Next step",
+      "description": "Offers a concrete action such as walking through key changes or sending the corrected file.",
+      "markers": ["walk", "share", "review", "send", "corrected", "file", "deck"],
+      "weight": 0.3
+    },
+    {
+      "key": "timeline",
+      "label": "Timeline",
+      "description": "Provides a clear deadline or time expectation.",
+      "markers": ["hour", "3", "p.m", "today", "within", "by"],
+      "weight": 0.2
+    }
+  ],
+  "poor_response": "We are not ready. Please wait because our team was busy.",
+  "excellent_response": "I apologize for the delay. We found one pricing issue in the final deck, and I do not want to share incorrect numbers. I can walk you through the key changes now and send the corrected file within an hour.",
+  "model_response": "I apologize for the delay. We found one pricing issue in the final deck, and I do not want to share incorrect numbers. I can walk you through the key changes now and send the corrected file within an hour."
+}

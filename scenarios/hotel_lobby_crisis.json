@@ -1,0 +1,64 @@
+{
+  "id": "hotel_lobby_crisis",
+  "title": "Hotel Lobby Crisis",
+  "level": "Business travel survival",
+  "context": "You arrive late at a hotel in Seoul after a long flight. You booked a room for a global partnership meeting, but the clerk cannot find your reservation.",
+  "persona": "A tired, slightly frustrated hotel clerk who is under pressure because the lobby is busy.",
+  "persona_emotion": "frustrated but still professional",
+  "transcript": [
+    {
+      "speaker": "You",
+      "line": "Hi, I have a reservation for tonight."
+    },
+    {
+      "speaker": "Hotel Clerk",
+      "line": "Could you tell me the name on the booking?"
+    },
+    {
+      "speaker": "You",
+      "line": "It should be under Kim Ji-hoon."
+    }
+  ],
+  "staff_line": "Sorry, we have no record of your reservation, and there may be no room for you tonight.",
+  "pause_line": "Sorry, we have no record of your reservation, and there may be no room for you tonight.",
+  "response_goal": "Stay calm, prove the booking exists, and ask the clerk to check again or escalate without sounding rude.",
+  "ideal_intent": "Politely explain that you have a reservation, provide the name or confirmation details, and ask the clerk to check again or escalate to a manager.",
+  "acceptable_responses": [
+    "I have a reservation under Kim Ji-hoon. Could you please check again with my confirmation number?",
+    "There may be a mistake. I booked a room for tonight under Kim Ji-hoon, and I can show the confirmation email.",
+    "Could you please check under my full name or ask a manager to confirm the booking?"
+  ],
+  "evaluation_rubric": [
+    {
+      "key": "reservation_identity",
+      "label": "Reservation identity",
+      "description": "Mentions the reservation, name, confirmation number, or email so the clerk can search again.",
+      "markers": ["reservation", "booking", "booked", "name", "under", "confirmation", "email", "Kim"],
+      "weight": 0.35
+    },
+    {
+      "key": "polite_recheck",
+      "label": "Polite recheck request",
+      "description": "Asks the clerk to check again with polite wording instead of blaming them.",
+      "markers": ["could", "please", "check", "again", "would", "help"],
+      "weight": 0.3
+    },
+    {
+      "key": "escalation_path",
+      "label": "Resolution path",
+      "description": "Offers a practical next step such as showing proof or asking a manager.",
+      "markers": ["manager", "confirm", "confirmation", "show", "email", "help"],
+      "weight": 0.25
+    },
+    {
+      "key": "calm_tone",
+      "label": "Calm tone",
+      "description": "Avoids aggressive or accusatory wording.",
+      "markers": ["understand", "sorry", "mistake", "may", "could"],
+      "weight": 0.1
+    }
+  ],
+  "poor_response": "You made a mistake. I booked a room, so fix it now.",
+  "excellent_response": "I understand. I have a reservation under Kim Ji-hoon for tonight, and I can show you my confirmation email. Could you please check once more or ask a manager to help?",
+  "model_response": "I understand. I have a reservation under Kim Ji-hoon for tonight, and I can show you my confirmation email. Could you please check once more or ask a manager to help?"
+}
